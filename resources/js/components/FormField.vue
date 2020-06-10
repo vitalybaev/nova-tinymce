@@ -34,13 +34,6 @@ export default {
                 options['file_picker_callback'] = this.filePicker
             }
 
-            options.media_url_resolver = function (data, resolve) {
-                console.log('resolved media', data);
-                var embedHtml = '<iframe src="' + data.url +
-                    '" width="400" height="400" ></iframe>';
-                resolve({html: embedHtml});
-            }
-
             return options
         }
     },
